@@ -1,0 +1,25 @@
+name = OSU
+description = OpenOSU installation profile
+core = 7.x
+
+; Panopoly Foundation
+dependencies[] = panopoly_core
+dependencies[] = panopoly_images
+dependencies[] = panopoly_theme
+dependencies[] = panopoly_magic
+dependencies[] = panopoly_widgets
+dependencies[] = panopoly_admin
+dependencies[] = panopoly_users
+
+; Panopoly Toolset
+dependencies[] = panopoly_pages
+dependencies[] = panopoly_search
+;dependencies[] = panopoly_wysiwyg
+
+; Panopoly Recommended - Admin
+dependencies[] = navbar
+dependencies[] = backports
+dependencies[] = simplified_menu_admin
+dependencies[] = save_draft
+dependencies[] = module_filter
+dependencies[] = date_popup_authored
