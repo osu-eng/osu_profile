@@ -2,7 +2,7 @@ api = 2
 core = 7.x
 
 ; ************************************************
-; ******************* Plugins ********************
+; ******************* Features ********************
 
 ; ************************************************
 ; ******************* Modules ********************
@@ -18,6 +18,10 @@ projects[media][version] = 2.0-alpha2
 ; Features
 projects[features][subdir] = contrib
 projects[features][version] = 2.0-rc3
+
+; Entity API
+projects[entity][subdir] = contrib
+projects[entity][version] = 1.2
 
 ; ************************************************
 ; ****************** Libraries *******************
