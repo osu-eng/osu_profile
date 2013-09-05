@@ -13,7 +13,7 @@ projects[ckeditor][version] = 1.13
 
 ; Media
 projects[media][subdir] = contrib
-projects[media][version] = 7.x-2.0-alpha2
+projects[media][version] = 2.0-alpha2
 
 ; ************************************************
 ; ****************** Libraries *******************
