@@ -23,3 +23,7 @@ dependencies[] = simplified_menu_admin
 dependencies[] = save_draft
 dependencies[] = module_filter
 dependencies[] = date_popup_authored
+
+; Panopoly Recommended - Other
+dependencies[] = devel
+dependencies[] = uuid
