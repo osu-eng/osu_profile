@@ -15,6 +15,10 @@ projects[ckeditor][version] = 1.13
 projects[media][subdir] = contrib
 projects[media][version] = 2.0-alpha2
 
+; Features
+projects[features][subdir] = contrib
+projects[features][version] = 2.0-rc3
+
 ; ************************************************
 ; ****************** Libraries *******************
 
