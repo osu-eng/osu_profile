@@ -4,6 +4,13 @@ core = 7.x
 ; ************************************************
 ; ******************* Features ********************
 
+; OSU WYSIWYG
+projects[osu_wysiwyg][subdir] = features
+projects[osu_wysiwyg][download][type] = git
+projects[osu_wysiwyg][download][url] = https://github.com/osu-eng/osu_wysiwyg.git
+projects[osu_wysiwyg][download][branch] = master
+
+
 ; ************************************************
 ; ******************* Modules ********************
 
