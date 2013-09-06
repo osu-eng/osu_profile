@@ -5,7 +5,7 @@ core = 7.x
 ; ******************* Features ********************
 
 ; OSU WYSIWYG
-projects[osu_wysiwyg][subdir] = custom
+projects[osu_wysiwyg][subdir] = contrib
 projects[osu_wysiwyg][download][type] = git
 projects[osu_wysiwyg][download][url] = https://github.com/osu-eng/osu_wysiwyg.git
 projects[osu_wysiwyg][download][branch] = master
