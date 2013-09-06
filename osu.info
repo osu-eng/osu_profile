@@ -2,6 +2,9 @@ name = OSU
 description = OpenOSU installation profile
 core = 7.x
 
+; OSU Foundation
+dependencies[] = osu_wysiwyg
+
 ; Panopoly Foundation
 dependencies[] = panopoly_core
 dependencies[] = panopoly_images
