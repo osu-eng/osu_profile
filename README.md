@@ -1,8 +1,10 @@
-OpenOSU install profile
-=======================
+OSU Installation Profile
+------------------------
 
-To install this profile, download the make file found here: https://github.com/osu-eng/osu_make/tree/7.x-2.x into the
-directory you would like your site to live. Then run:
+This Drupal installation profile leverages much of the wetkit Drupal distro: https://drupal.org/project/wetkit,
+along with OSU specific preferences.
+
+To install download build-osu.make, and run:
 
 ```
 drush make build-osu.make
