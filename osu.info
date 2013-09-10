@@ -1,5 +1,5 @@
 name = OSU WEM
-distribution_name = WetKit
+distribution_name = OSU
 description = Installation Profile created for the Web Experience Toolkit using Drupal WEM.
 core = 7.x
 exclusive = 1
