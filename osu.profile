@@ -23,9 +23,9 @@ function osu_install_tasks(&$install_state) {
   $tasks = array();
   $current_task = variable_get('install_task', 'done');
 
-//  // Add the WetKit theme selection to the installation process.
-//  require_once drupal_get_path('module', 'wetkit_theme') . '/wetkit_theme.profile.inc';
-//  $tasks = $tasks + wetkit_theme_profile_theme_selection_install_task($install_state);
+ // Add the WetKit theme selection to the installation process.
+ require_once drupal_get_path('module', 'wetkit_theme') . '/wetkit_theme.profile.inc';
+ $tasks = $tasks + wetkit_theme_profile_theme_selection_install_task($install_state);
 //
 //  // Set up a task to include secondary language (fr).
 //  $tasks['wetkit_batch_processing'] = array(
