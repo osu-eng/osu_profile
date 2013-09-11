@@ -161,11 +161,11 @@ function osu_form_install_configure_form_alter(&$form, $form_state) {
     $form['admin_account']['account']['mail']['#default_value'] = 'admin@' . $_SERVER['HTTP_HOST'];
   }
 
-  $form['demo_content'] = array(
-    '#title' => st('Import demo content'),
-    '#description' => st('Whether demo content should imported.'),
-    '#type' => 'checkbox',
-  );
+  // $form['demo_content'] = array(
+  //   '#title' => st('Import demo content'),
+  //   '#description' => st('Whether demo content should imported.'),
+  //   '#type' => 'checkbox',
+  // );
   array_push($form['#submit'], 'osu_import_demo_content_form_submit');
 }
 
