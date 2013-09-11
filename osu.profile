@@ -76,7 +76,7 @@ function osu_install_tasks_alter(&$tasks, $install_state) {
   $old_tasks = $tasks;
   $tasks = array_slice($old_tasks, 0, 2) + $new_task + array_slice($old_tasks, 2);
 
-  _osu_set_theme('wetkit_shiny');
+  _osu_set_theme('osu_shiny');
 
   // If using French Locale as default remove associated Install Task.
 //  unset($tasks['install_import_locales']);

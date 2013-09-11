@@ -135,7 +135,7 @@ projects[wetkit_omega][download][type] = git
 projects[wetkit_omega][download][revision] = ab31814
 projects[wetkit_omega][download][branch] = 7.x-1.x
 
-projects[wetkit_shiny][version] = 1.x-dev
-projects[wetkit_shiny][download][type] = git
-projects[wetkit_shiny][download][revision] = 69e7fa4
-projects[wetkit_shiny][download][branch] = 7.x-1.x
+projects[osu_shiny][version] = 1.x-dev
+projects[osu_shiny][download][type] = git
+projects[osu_shiny][download][url] = https://github.com/osu-eng/osu_shiny.git
+projects[osu_shiny][download][branch] = 7.x-1.x
