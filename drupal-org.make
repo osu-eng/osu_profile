@@ -9,12 +9,6 @@ projects[wetkit_admin][download][type] = git
 projects[wetkit_admin][download][revision] = b59c330
 projects[wetkit_admin][download][branch] = 7.x-1.x
 
-; projects[wetkit_bean][version] = 1.x-dev
-; projects[wetkit_bean][subdir] = custom
-; projects[wetkit_bean][download][type] = git
-; projects[wetkit_bean][download][revision] = 17e6af4
-; projects[wetkit_bean][download][branch] = 7.x-1.x
-
 projects[wetkit_breadcrumbs][version] = 1.x-dev
 projects[wetkit_breadcrumbs][subdir] = custom
 projects[wetkit_breadcrumbs][download][type] = git
@@ -33,12 +27,6 @@ projects[wetkit_demo][download][type] = git
 projects[wetkit_demo][download][revision] = 24f2e38
 projects[wetkit_demo][download][branch] = 7.x-1.x
 
-projects[wetkit_deployment][version] = 1.x-dev
-projects[wetkit_deployment][subdir] = custom
-projects[wetkit_deployment][download][type] = git
-projects[wetkit_deployment][download][revision] = f6d9e30
-projects[wetkit_deployment][download][branch] = 7.x-1.x
-
 projects[wetkit_images][version] = 1.x-dev
 projects[wetkit_images][subdir] = custom
 projects[wetkit_images][download][type] = git
@@ -51,12 +39,6 @@ projects[wetkit_git][download][type] = git
 projects[wetkit_git][download][revision] = 43c9509
 projects[wetkit_git][download][branch] = 7.x-1.x
 
-; projects[wetkit_language][version] = 1.x-dev
-; projects[wetkit_language][subdir] = custom
-; projects[wetkit_language][download][type] = git
-; projects[wetkit_language][download][revision] = d0a8f40
-; projects[wetkit_language][download][branch] = 7.x-1.x
-
 projects[wetkit_layouts][version] = 1.x-dev
 projects[wetkit_layouts][subdir] = custom
 projects[wetkit_layouts][download][type] = git
@@ -68,12 +50,6 @@ projects[wetkit_menu][subdir] = custom
 projects[wetkit_menu][download][type] = git
 projects[wetkit_menu][download][revision] = 8fd6330
 projects[wetkit_menu][download][branch] = 7.x-1.x
-
-projects[wetkit_metatag][version] = 1.x-dev
-projects[wetkit_metatag][subdir] = custom
-projects[wetkit_metatag][download][type] = git
-projects[wetkit_metatag][download][revision] = f3630b2
-projects[wetkit_metatag][download][branch] = 7.x-1.x
 
 projects[wetkit_migrate][version] = 1.x-dev
 projects[wetkit_migrate][subdir] = custom
