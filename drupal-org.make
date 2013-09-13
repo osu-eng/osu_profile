@@ -93,6 +93,12 @@ projects[wetkit_widgets][download][type] = git
 projects[wetkit_widgets][download][revision] = 96eccc3
 projects[wetkit_widgets][download][branch] = 7.x-1.x
 
+projects[osu_captions][type] = module
+projects[osu_captions][subdir] = custom
+projects[osu_captions][download][type] = git
+projects[osu_captions][download][url] = https://github.com/osu-eng/osu_captions.git
+projects[osu_captions][download][branch] = 7.x-1.x
+
 projects[wetkit_wysiwyg][version] = 1.x-dev
 projects[wetkit_wysiwyg][subdir] = custom
 projects[wetkit_wysiwyg][download][type] = git
