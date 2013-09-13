@@ -39,6 +39,7 @@ dependencies[] = wetkit_pages
 dependencies[] = wetkit_layouts
 dependencies[] = wetkit_theme
 dependencies[] = wetkit_wysiwyg
+dependencies[] = wetkit_language
 dependencies[] = osu_captions
 dependencies[] = wetkit_migrate
 dependencies[] = wetkit_menu
