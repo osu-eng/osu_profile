@@ -1,8 +1,7 @@
 api = 2
 core = 7.x
 
-; GitHub packaging standards
-includes[] = drupal-org-core.make
+projects[] = drupal
 
 projects[osu][type] = profile
 projects[osu][download][type] = git

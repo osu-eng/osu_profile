@@ -1,9 +1,6 @@
 api = 2
 core = 7.x
 
-projects[drupal][version] = 7.23
-projects[drupal][type] = core
-
 ; The Panopoly Foundation
 
 projects[panopoly_core][version] = 1.0-rc5
