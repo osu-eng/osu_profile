@@ -1,6 +1,6 @@
-name = OSU WEM
+name = OSU Installation Profile
 distribution_name = OSU
-description = Installation Profile created for the Web Experience Toolkit using Drupal WEM.
+description = Installation Profile created for OSU.
 core = 7.x
 exclusive = 1
 
@@ -30,31 +30,31 @@ dependencies[] = contextual
 ;dependencies[] = statistics
 ;dependencies[] = simpletest
 
-; WxtKit Foundation
-dependencies[] = wetkit_core
-dependencies[] = wetkit_admin
-dependencies[] = wetkit_images
-dependencies[] = wetkit_widgets
-dependencies[] = wetkit_pages
-dependencies[] = wetkit_layouts
-dependencies[] = wetkit_theme
-dependencies[] = wetkit_wysiwyg
-dependencies[] = wetkit_language
-dependencies[] = osu_captions
-dependencies[] = wetkit_migrate
-dependencies[] = wetkit_menu
-dependencies[] = wetkit_wetboew
-dependencies[] = wetkit_breadcrumbs
-dependencies[] = wetkit_users
-dependencies[] = wetkit_search
+; Panopoly Foundation
+dependencies[] = panopoly_core
+dependencies[] = panopoly_images
+dependencies[] = panopoly_theme
+dependencies[] = panopoly_magic
+dependencies[] = panopoly_widgets
+dependencies[] = panopoly_admin
+dependencies[] = panopoly_users
 
-; WxtKit Testing
-files[] = wetkit.test
-files[] = tests/simpletest/WetKitWebTestCase.inc
+; Panopoly Toolset
+dependencies[] = panopoly_pages
+; dependencies[] = panopoly_search
+dependencies[] = panopoly_wysiwyg
+
+; Panopoly Recommended - Admin
+dependencies[] = navbar
+dependencies[] = backports
+dependencies[] = simplified_menu_admin
+dependencies[] = save_draft
+dependencies[] = module_filter
+dependencies[] = date_popup_authored
+
+; OSU 
+dependencies[] = osu_captions
 
 ; CSS Stylesheets
 stylesheets[all][] = css/wetkit.css
 
-; Settings
-variables[password_policy_show_restrictions] = 1
-variables[password_policy_new_login_change] = 0

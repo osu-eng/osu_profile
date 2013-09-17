@@ -24,31 +24,13 @@ function osu_install_tasks(&$install_state) {
   $current_task = variable_get('install_task', 'done');
 
  // Add the WetKit theme selection to the installation process.
- require_once drupal_get_path('module', 'wetkit_theme') . '/wetkit_theme.profile.inc';
- $tasks = $tasks + wetkit_theme_profile_theme_selection_install_task($install_state);
-//
-//  // Set up a task to include secondary language (fr).
-//  $tasks['wetkit_batch_processing'] = array(
-//    'display_name' => st('Import French Language'),
-//    'type' => 'batch',
-//  );
-//
-  $tasks['osu_import_content'] = array(
-    'display_name' => st('Import required content'),
-    'type' => 'batch',
-    // Show this task only after the osu steps have been reached.
-    'display' => strpos($current_task, 'osu_') !== FALSE,
-  );
-//
-//  $tasks['wetkit_import_demo_content'] = array(
-//    'display_name' => st('Import demo content'),
-//    'type' => 'batch',
-//    // Show this task only after the WetKit steps have bene reached.
-//    'display' => strpos($current_task, 'wetkit_') !== FALSE,
-//    'run' => isset($install_state['parameters']['demo_content']) ?
-//      $install_state['parameters']['demo_content'] == 1 ? INSTALL_TASK_RUN_IF_NOT_COMPLETED : INSTALL_TASK_SKIP
-//      : INSTALL_TASK_SKIP,
-//  );
+ //require_once drupal_get_path('module', 'wetkit_theme') . '/wetkit_theme.profile.inc';
+ //$tasks = $tasks + wetkit_theme_profile_theme_selection_install_task($install_state);
+
+// Add the Panopoly App Server to the Installation Process
+  require_once(drupal_get_path('module', 'apps') . '/apps.profile.inc');
+  
+  $tasks = $tasks + apps_profile_install_tasks($install_state, array('machine name' => 'panopoly', 'default apps' => array('panopoly_demo')));
 
   return $tasks;
 }
@@ -78,13 +60,9 @@ function osu_install_tasks_alter(&$tasks, $install_state) {
 
   _osu_set_theme('osu_shiny');
 
-  // If using French Locale as default remove associated Install Task.
-//  unset($tasks['install_import_locales']);
-//  unset($tasks['install_import_locales_remaining']);
-
-  // Magically go one level deeper in solving years of dependency problems.
-  require_once drupal_get_path('module', 'wetkit_core') . '/wetkit_core.profile.inc';
-  $tasks['install_load_profile']['function'] = 'wetkit_core_install_load_profile';
+  // Magically go one level deeper in solving years of dependency problems
+  require_once(drupal_get_path('module', 'panopoly_core') . '/panopoly_core.profile.inc');
+  $tasks['install_load_profile']['function'] = 'panopoly_core_install_load_profile';
 }
 
 /**
@@ -161,144 +139,8 @@ function osu_form_install_configure_form_alter(&$form, $form_state) {
     $form['admin_account']['account']['mail']['#default_value'] = 'admin@' . $_SERVER['HTTP_HOST'];
   }
 
-  // $form['demo_content'] = array(
-  //   '#title' => st('Import demo content'),
-  //   '#description' => st('Whether demo content should imported.'),
-  //   '#type' => 'checkbox',
-  // );
-  array_push($form['#submit'], 'osu_import_demo_content_form_submit');
+  //array_push($form['#submit'], 'osu_import_demo_content_form_submit');
 }
 
-/**
- * Batch Processing for French Language import.
- */
-function osu_batch_processing(&$install_state) {
-  // Import the additonal language po file and translate the interface.
-  // Require once is only added here because too early in the bootstrap.
-  require_once 'includes/locale.inc';
-  require_once 'includes/form.inc';
 
-  // Batch up the process + import existing po files.
-  $batch = locale_batch_by_language('fr');
-  return $batch;
 
-}
-
-/**
- * Task callback: return a batch API array with the products to be imported.
- * Import required osu content
- */
-function osu_import_content() {
-
-  // Run Mega Menu migration.
-  $operations[] = array('_osu_import', array(
-    'WetKitMigrateMegaMenu',
-    t('Importing content.'),
-  ));
-
-  // Run entities import.
-  $operations[] = array('_osu_entities_import', array(
-    t('Initializing entities.'),
-  ));
-
-  // Page Manager Fix.
-  $operations[] = array('_osu_panels_fix', array(
-    t('Fix Page Manager dependency chain issue.'),
-  ));
-
-  $batch = array(
-    'title' => t('Importing content'),
-    'operations' => $operations,
-    'file' => drupal_get_path('profile', 'osu_profile') . '/osu.install_callbacks.inc',
-  );
-  return $batch;
-}
-
-/**
- * Form submit callback: Demo content form submit callback
- */
-function osu_import_demo_content_form_submit($form, &$form_state) {
-  global $install_state;
-  $install_state['parameters']['demo_content'] = $form_state['values']['demo_content'];
-}
-
-/**
- * Task callback: return a batch API array with the products to be imported.
- *   Import demo osu content
- */
-function osu_import_demo_content() {
-  // Fixes problems when the CSV files used for importing have been created
-  // on a Mac, by forcing PHP to detect the appropriate line endings.
-  ini_set("auto_detect_line_endings", TRUE);
-
-  // Run Site Menu migration.
-  $operations[] = array('_osu_import', array(
-    'WetKitMigrateSiteMenu',
-    t('Importing content.'),
-  ));
-
-  // Run Site Menu Links migration.
-  $operations[] = array('_osu_import', array(
-    'WetKitMigrateSiteMenuLinks',
-    t('Importing content.'),
-  ));
-
-  // Run Default_content migration.
-  $operations[] = array('_osu_import', array(
-    'WetKitMigrateDefaultContent',
-    t('Importing content.'),
-  ));
-
-  // Enable wetkit Demo.
-  $operations[] = array('module_enable', array(
-    array('wetkit_demo'),
-    t('Enabling wetkit_demo module.'),
-  ));
-
-  // Run Mega Menu Links migration.
-  $operations[] = array('_osu_import', array(
-    'WetKitMigrateMegaMenuLinks',
-    t('Importing content.'),
-  ));
-
-  // Install Bean demo content.
-//  $operations[] = array('_osu_bean_import', array(t('Importing Bean content.')));
-
-  $batch = array(
-    'title' => t('Importing content'),
-    'operations' => $operations,
-    'file' => drupal_get_path('profile', 'osu') . '/osu.install_callbacks.inc',
-  );
-
-  return $batch;
-}
-
-/**
- * Implements hook_form_FORM_ID_alter().
- */
-function osu_form_apps_profile_apps_select_form_alter(&$form, $form_state) {
-  // Hide some messages from various modules.
-  drupal_get_messages('status');
-  drupal_get_messages('warning');
-  drupal_get_messages('error');
-
-  // For some things there are no need.
-  $form['apps_message']['#access'] = FALSE;
-  $form['apps_fieldset']['apps']['#title'] = NULL;
-
-  // Improve style of apps selection form.
-  if (isset($form['apps_fieldset'])) {
-    $manifest = apps_manifest(apps_servers('wetkit'));
-    foreach ($manifest['apps'] as $name => $app) {
-      if ($name != '#theme') {
-        $form['apps_fieldset']['apps']['#options'][$name] = '<strong>' . $app['name'] . '</strong><p><div class="admin-options"><div class="form-item">' . theme('image', array(
-          'path' => $app['logo']['path'],
-          'height' => '32', 'width' => '32',
-        )) . '</div>' . $app['description'] . '</div></p>';
-      }
-    }
-  }
-  // Remove the demo content selection option since this is handled through the
-  // WetKit demo module.
-  $form['default_content_fieldset']['#access'] = FALSE;
-}
