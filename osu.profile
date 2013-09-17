@@ -27,11 +27,6 @@ function osu_install_tasks(&$install_state) {
  //require_once drupal_get_path('module', 'wetkit_theme') . '/wetkit_theme.profile.inc';
  //$tasks = $tasks + wetkit_theme_profile_theme_selection_install_task($install_state);
 
-// Add the Panopoly App Server to the Installation Process
-  require_once(drupal_get_path('module', 'apps') . '/apps.profile.inc');
-  
-  $tasks = $tasks + apps_profile_install_tasks($install_state, array('machine name' => 'panopoly', 'default apps' => array('panopoly_demo')));
-
   return $tasks;
 }
 

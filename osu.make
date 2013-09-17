@@ -30,6 +30,9 @@ projects[panopoly_users][subdir] = panopoly
 projects[panopoly_pages][version] = 1.0-rc5
 projects[panopoly_pages][subdir] = panopoly
 
+projects[panopoly_search][version] = 1.0-rc5
+projects[panopoly_search][subdir] = panopoly
+
 ; Extras
 
 projects[osu_captions][type] = module
