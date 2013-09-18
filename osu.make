@@ -47,6 +47,12 @@ projects[wetkit_wysiwyg][download][type] = git
 projects[wetkit_wysiwyg][download][revision] = c8ba607
 projects[wetkit_wysiwyg][download][branch] = 7.x-1.x
 
+projects[osu_codemirror][type] = module
+projects[osu_codemirror][subdir] = custom
+projects[osu_codemirror][download][type] = git
+projects[osu_codemirror][download][url] = https://github.com/osu-eng/osu_codemirror.git
+projects[osu_codemirror][download][branch] = 7.x-1.x
+
 ; WetKit Foundation (Themes)
 
 projects[wetkit_ember][version] = 1.x-dev
