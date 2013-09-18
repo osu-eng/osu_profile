@@ -59,17 +59,12 @@ projects[osu_workbench][download][type] = git
 projects[osu_workbench][download][url] = https://github.com/osu-eng/osu_workbench.git
 projects[osu_workbench][download][branch] = 7.x-1.x
 
-; WetKit Foundation (Themes)
+; Themes
 
 projects[wetkit_ember][version] = 1.x-dev
 projects[wetkit_ember][download][type] = git
 projects[wetkit_ember][download][revision] = 7a8babc
 projects[wetkit_ember][download][branch] = 7.x-1.x
-
-projects[wetkit_omega][version] = 1.x-dev
-projects[wetkit_omega][download][type] = git
-projects[wetkit_omega][download][revision] = ab31814
-projects[wetkit_omega][download][branch] = 7.x-1.x
 
 projects[osu_shiny][type] = theme
 projects[osu_shiny][download][type] = git
