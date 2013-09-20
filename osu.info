@@ -53,6 +53,7 @@ dependencies[] = date_popup_authored
 
 ; OSU 
 dependencies[] = osu_wysiwyg
+dependencies[] = osu_codemirror
 
 ; CSS Stylesheets
 stylesheets[all][] = css/wetkit.css
