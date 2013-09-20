@@ -41,11 +41,11 @@ projects[osu_captions][download][type] = git
 projects[osu_captions][download][url] = https://github.com/osu-eng/osu_captions.git
 projects[osu_captions][download][branch] = 7.x-1.x
 
-projects[wetkit_wysiwyg][version] = 1.x-dev
-projects[wetkit_wysiwyg][subdir] = custom
-projects[wetkit_wysiwyg][download][type] = git
-projects[wetkit_wysiwyg][download][revision] = c8ba607
-projects[wetkit_wysiwyg][download][branch] = 7.x-1.x
+projects[osu_wysiwyg][type] = module
+projects[osu_wysiwyg][subdir] = custom
+projects[osu_wysiwyg][download][type] = git
+projects[osu_wysiwyg][download][url] = https://github.com/osu-eng/osu_wysiwyg.git
+projects[osu_wysiwyg][download][branch] = develop
 
 projects[osu_codemirror][type] = module
 projects[osu_codemirror][subdir] = custom
