@@ -52,8 +52,7 @@ dependencies[] = module_filter
 dependencies[] = date_popup_authored
 
 ; OSU 
-dependencies[] = osu_captions
-dependencies[] = osu_codemirror
+dependencies[] = osu_wysiwyg
 
 ; CSS Stylesheets
 stylesheets[all][] = css/wetkit.css
