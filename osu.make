@@ -41,6 +41,12 @@ projects[osu_wysiwyg][download][type] = git
 projects[osu_wysiwyg][download][url] = https://github.com/osu-eng/osu_wysiwyg.git
 projects[osu_wysiwyg][download][branch] = develop
 
+projects[osu_codemirror][type] = module
+projects[osu_codemirror][subdir] = custom
+projects[osu_codemirror][download][type] = git
+projects[osu_codemirror][download][url] = https://github.com/osu-eng/osu_codemirror.git
+projects[osu_codemirror][download][branch] = 7.x-1.x
+
 projects[osu_workbench][type] = module
 projects[osu_workbench][subdir] = custom
 projects[osu_workbench][download][type] = git
