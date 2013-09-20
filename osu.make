@@ -33,25 +33,13 @@ projects[panopoly_pages][subdir] = panopoly
 projects[panopoly_search][version] = 1.0-rc5
 projects[panopoly_search][subdir] = panopoly
 
-; Extras
-
-projects[osu_captions][type] = module
-projects[osu_captions][subdir] = custom
-projects[osu_captions][download][type] = git
-projects[osu_captions][download][url] = https://github.com/osu-eng/osu_captions.git
-projects[osu_captions][download][branch] = 7.x-1.x
+; OSU Features
 
 projects[osu_wysiwyg][type] = module
 projects[osu_wysiwyg][subdir] = custom
 projects[osu_wysiwyg][download][type] = git
 projects[osu_wysiwyg][download][url] = https://github.com/osu-eng/osu_wysiwyg.git
 projects[osu_wysiwyg][download][branch] = develop
-
-projects[osu_codemirror][type] = module
-projects[osu_codemirror][subdir] = custom
-projects[osu_codemirror][download][type] = git
-projects[osu_codemirror][download][url] = https://github.com/osu-eng/osu_codemirror.git
-projects[osu_codemirror][download][branch] = 7.x-1.x
 
 projects[osu_workbench][type] = module
 projects[osu_workbench][subdir] = custom
