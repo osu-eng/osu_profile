@@ -42,7 +42,6 @@ dependencies[] = panopoly_users
 ; Panopoly Toolset
 dependencies[] = panopoly_pages
 dependencies[] = panopoly_search
-dependencies[] = wetkit_wysiwyg
 
 ; Panopoly Recommended - Admin
 dependencies[] = navbar
@@ -53,7 +52,7 @@ dependencies[] = module_filter
 dependencies[] = date_popup_authored
 
 ; OSU 
-dependencies[] = osu_captions
+dependencies[] = osu_wysiwyg
 dependencies[] = osu_codemirror
 
 ; CSS Stylesheets

@@ -33,19 +33,13 @@ projects[panopoly_pages][subdir] = panopoly
 projects[panopoly_search][version] = 1.0-rc5
 projects[panopoly_search][subdir] = panopoly
 
-; Extras
+; OSU Features
 
-projects[osu_captions][type] = module
-projects[osu_captions][subdir] = custom
-projects[osu_captions][download][type] = git
-projects[osu_captions][download][url] = https://github.com/osu-eng/osu_captions.git
-projects[osu_captions][download][branch] = 7.x-1.x
-
-projects[wetkit_wysiwyg][version] = 1.x-dev
-projects[wetkit_wysiwyg][subdir] = custom
-projects[wetkit_wysiwyg][download][type] = git
-projects[wetkit_wysiwyg][download][revision] = c8ba607
-projects[wetkit_wysiwyg][download][branch] = 7.x-1.x
+projects[osu_wysiwyg][type] = module
+projects[osu_wysiwyg][subdir] = custom
+projects[osu_wysiwyg][download][type] = git
+projects[osu_wysiwyg][download][url] = https://github.com/osu-eng/osu_wysiwyg.git
+projects[osu_wysiwyg][download][branch] = 7.x-1.x
 
 projects[osu_codemirror][type] = module
 projects[osu_codemirror][subdir] = custom
@@ -53,17 +47,18 @@ projects[osu_codemirror][download][type] = git
 projects[osu_codemirror][download][url] = https://github.com/osu-eng/osu_codemirror.git
 projects[osu_codemirror][download][branch] = 7.x-1.x
 
-; WetKit Foundation (Themes)
+projects[osu_workbench][type] = module
+projects[osu_workbench][subdir] = custom
+projects[osu_workbench][download][type] = git
+projects[osu_workbench][download][url] = https://github.com/osu-eng/osu_workbench.git
+projects[osu_workbench][download][branch] = 7.x-1.x
+
+; Themes
 
 projects[wetkit_ember][version] = 1.x-dev
 projects[wetkit_ember][download][type] = git
 projects[wetkit_ember][download][revision] = 7a8babc
 projects[wetkit_ember][download][branch] = 7.x-1.x
-
-projects[wetkit_omega][version] = 1.x-dev
-projects[wetkit_omega][download][type] = git
-projects[wetkit_omega][download][revision] = ab31814
-projects[wetkit_omega][download][branch] = 7.x-1.x
 
 projects[osu_shiny][type] = theme
 projects[osu_shiny][download][type] = git
