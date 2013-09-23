@@ -1,6 +1,10 @@
 api = 2
 core = 7.x
 
+; Security updates for entity api module. Remove this when panopoly_core updates.
+projects[entity][version] = 1.2
+projects[entity][subdir] = contrib
+
 ; The Panopoly Foundation
 
 projects[panopoly_core][version] = 1.0-rc5
@@ -39,7 +43,7 @@ projects[osu_wysiwyg][type] = module
 projects[osu_wysiwyg][subdir] = custom
 projects[osu_wysiwyg][download][type] = git
 projects[osu_wysiwyg][download][url] = https://github.com/osu-eng/osu_wysiwyg.git
-projects[osu_wysiwyg][download][branch] = 7.x-1.x
+projects[osu_wysiwyg][download][branch] = develop
 
 projects[osu_codemirror][type] = module
 projects[osu_codemirror][subdir] = custom
