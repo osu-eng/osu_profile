@@ -1,6 +1,10 @@
 api = 2
 core = 7.x
 
+; Security updates for entity api module. Remove this when panopoly_core updates.
+projects[entity][version] = 1.2
+projects[entity][subdir] = contrib
+
 ; The Panopoly Foundation
 
 projects[panopoly_core][version] = 1.0-rc5
