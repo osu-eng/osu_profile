@@ -16,11 +16,11 @@ function osu_install() {
   variable_set('update_notification_threshold', array('security'));
 
   // Set the Admin Theme.
-  db_update('system')
-    ->fields(array('status' => 1))
-    ->condition('type', 'theme')
-    ->condition('name', 'wetkit_ember')
-    ->execute();
+  // db_update('system')
+  //   ->fields(array('status' => 1))
+  //   ->condition('type', 'theme')
+  //   ->condition('name', 'wetkit_ember')
+  //   ->execute();
 
-  variable_set('admin_theme', 'wetkit_ember');
+  // variable_set('admin_theme', 'wetkit_ember');
 }
