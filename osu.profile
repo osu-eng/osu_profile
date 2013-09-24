@@ -23,10 +23,6 @@ function osu_install_tasks(&$install_state) {
   $tasks = array();
   $current_task = variable_get('install_task', 'done');
 
- // Add the WetKit theme selection to the installation process.
- //require_once drupal_get_path('module', 'wetkit_theme') . '/wetkit_theme.profile.inc';
- //$tasks = $tasks + wetkit_theme_profile_theme_selection_install_task($install_state);
-
   return $tasks;
 }
 
@@ -123,18 +119,9 @@ function osu_form_install_configure_form_alter(&$form, $form_state) {
   drupal_get_messages('error');
 
   // Set reasonable defaults for site configuration form.
-  $form['site_information']['site_name']['#default_value'] = 'Web Experience Toolkit';
   $form['admin_account']['account']['name']['#default_value'] = 'admin';
   $form['server_settings']['site_default_country']['#default_value'] = 'US';
   $form['server_settings']['date_default_timezone']['#default_value'] = 'America/New_York';
-
-  // Define a default email address if we can guess a valid one.
-  if (valid_email_address('admin@' . $_SERVER['HTTP_HOST'])) {
-    $form['site_information']['site_mail']['#default_value'] = 'admin@' . $_SERVER['HTTP_HOST'];
-    $form['admin_account']['account']['mail']['#default_value'] = 'admin@' . $_SERVER['HTTP_HOST'];
-  }
-
-  //array_push($form['#submit'], 'osu_import_demo_content_form_submit');
 }
 
 

@@ -59,11 +59,6 @@ projects[osu_workbench][download][branch] = 7.x-1.x
 
 ; Themes
 
-projects[wetkit_ember][version] = 1.x-dev
-projects[wetkit_ember][download][type] = git
-projects[wetkit_ember][download][revision] = 7a8babc
-projects[wetkit_ember][download][branch] = 7.x-1.x
-
 projects[osu_shiny][type] = theme
 projects[osu_shiny][download][type] = git
 projects[osu_shiny][download][url] = https://github.com/osu-eng/osu_shiny.git
